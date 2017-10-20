@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from utils import ensure_dir_exists
 
 def main():
     inputDir = './data'
@@ -14,10 +15,6 @@ def main():
             data = read_file(filepath)
             if(isinstance(data, pd.core.frame.DataFrame)):
                 save_data(data, outputDirname, file)
-
-def ensure_dir_exists(d):
-    if not os.path.exists(d):
-        os.makedirs(d)
 
 def read_file(filename):
     data = pd.read_csv(filename)

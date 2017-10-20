@@ -1,3 +1,4 @@
 data/
 processedData/
 finalData/
+__pycache__/
